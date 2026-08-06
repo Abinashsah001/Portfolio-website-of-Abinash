@@ -1,0 +1,591 @@
+/* =========================
+   Google Font
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#081b29;
+    color:#ffffff;
+    line-height:1.6;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(8,27,41,.95);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+}
+
+.logo h2{
+    color:#00abf0;
+    font-size:30px;
+    font-weight:700;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:30px;
+    font-size:17px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#00abf0;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:120px 8% 60px;
+    gap:50px;
+}
+
+.hero-text{
+    flex:1;
+}
+
+.hero-text h3{
+    font-size:28px;
+}
+
+.hero-text h1{
+    font-size:60px;
+    margin:15px 0;
+}
+
+.hero-text h2{
+    font-size:32px;
+    color:#00abf0;
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    color:#d6d6d6;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 35px;
+    background:#00abf0;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    transition:.4s;
+    font-weight:600;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 20px #00abf0;
+}
+
+.hero-image{
+    flex:1;
+    display:flex;
+    justify-content:center;
+}
+
+.hero-image img{
+    width:350px;
+    height:350px;
+    object-fit:cover;
+    border-radius:50%;
+    border:6px solid #00abf0;
+    animation:float 4s ease-in-out infinite;
+    box-shadow:0 0 25px rgba(0,171,240,.5);
+}
+
+@keyframes float{
+
+0%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-15px);
+}
+
+100%{
+transform:translateY(0);
+}
+
+}
+
+/* =========================
+   SECTION
+========================= */
+
+section{
+    padding:90px 8%;
+}
+
+section h2{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:50px;
+    color:#00abf0;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:60px;
+    flex-wrap:wrap;
+}
+
+.about-image img{
+    width:320px;
+    border-radius:20px;
+    box-shadow:0 0 25px rgba(0,171,240,.4);
+}
+
+.about-text{
+    max-width:650px;
+}
+
+.about-text h3{
+    font-size:30px;
+    margin-bottom:20px;
+}
+
+.about-text p{
+    color:#ddd;
+    font-size:17px;
+}
+
+/* =========================
+   SKILLS
+========================= */
+
+.skill-box{
+    max-width:700px;
+    margin:auto;
+}
+
+.skill-box p{
+    display:flex;
+    justify-content:space-between;
+    margin:18px 0 8px;
+    font-weight:600;
+}
+
+.progress{
+    width:100%;
+    height:14px;
+    background:#16364d;
+    border-radius:20px;
+    overflow:hidden;
+    margin-bottom:25px;
+}
+
+.progress-bar{
+    height:100%;
+    width:0;
+    border-radius:20px;
+    background:linear-gradient(90deg,#00abf0,#00e5ff);
+    transition:width 2s ease-in-out;
+}
+}
+/* Active Navigation */
+
+nav a.active{
+    color:#00abf0;
+    font-weight:bold;
+}
+
+/* Scroll Top Button */
+
+#topBtn{
+
+    position:fixed;
+    bottom:30px;
+    right:30px;
+
+    width:50px;
+    height:50px;
+
+    border:none;
+    border-radius:50%;
+
+    background:#00abf0;
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    display:none;
+
+    transition:.3s;
+
+}
+
+#topBtn:hover{
+
+    transform:scale(1.1);
+
+}
+
+/* Reveal Animation */
+
+.hidden{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+    transition:all 1s ease;
+
+}
+
+.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+/* =========================
+   EDUCATION
+========================= */
+
+.education-card{
+    background:#112e42;
+    padding:30px;
+    border-radius:15px;
+    margin-bottom:25px;
+    transition:.4s;
+}
+
+.education-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 20px #00abf0;
+}
+
+.education-card h3{
+    color:#00abf0;
+    margin-bottom:10px;
+}
+/* =========================
+   PROJECTS
+========================= */
+
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.project{
+    background:#112e42;
+    padding:30px;
+    border-radius:15px;
+    transition:.4s;
+}
+
+.project:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 25px #00abf0;
+}
+
+.project h3{
+    color:#00abf0;
+    margin-bottom:15px;
+}
+/* =========================
+   SERVICES
+========================= */
+
+.service-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.service{
+    background:#112e42;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    transition:.4s;
+}
+
+.service:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 20px #00abf0;
+}
+/* =========================
+   ACHIEVEMENTS
+========================= */
+
+#Achievements ul{
+    max-width:700px;
+    margin:auto;
+    list-style:none;
+}
+
+#Achievements li{
+    background:#112e42;
+    padding:20px;
+    margin:15px 0;
+    border-left:5px solid #00abf0;
+    border-radius:8px;
+}
+/* =========================
+   CONTACT
+========================= */
+
+form{
+    max-width:700px;
+    margin:auto;
+}
+
+form input,
+form textarea{
+
+    width:100%;
+    padding:15px;
+    margin:12px 0;
+
+    border:none;
+    outline:none;
+
+    border-radius:10px;
+
+    background:#112e42;
+    color:white;
+
+}
+
+form textarea{
+    height:170px;
+}
+
+form button{
+
+    padding:15px 40px;
+
+    background:#00abf0;
+
+    color:white;
+
+    border:none;
+
+    border-radius:30px;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+form button:hover{
+
+    transform:scale(1.05);
+
+    box-shadow:0 0 20px #00abf0;
+
+}
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+    background:#112e42;
+
+    text-align:center;
+
+    padding:40px 20px;
+
+}
+
+footer h3{
+
+    color:#00abf0;
+
+    font-size:25px;
+
+}
+
+footer p{
+
+    margin-top:15px;
+
+    font-size:18px;
+
+}
+.social{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:25px;
+
+    margin:25px 0;
+
+}
+
+.social a{
+
+    width:40px;
+    height:40px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border:2px solid #00abf0;
+
+    border-radius:50%;
+
+    color:#00abf0;
+
+    font-size:28px;
+
+    text-decoration:none;
+
+    transition:.4s;
+
+}
+
+.social a:hover{
+
+    background:#00abf0;
+
+    color:#081b29;
+
+    transform:translateY(-8px);
+
+    box-shadow:0 0 25px #00abf0;
+
+}
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:900px){
+
+header{
+
+flex-direction:column;
+
+}
+
+nav{
+
+margin-top:20px;
+
+}
+
+.hero{
+
+flex-direction:column-reverse;
+
+text-align:center;
+
+}
+
+.hero-text h1{
+
+font-size:45px;
+
+}
+
+.hero-image img{
+
+width:180px;
+height:180px;
+
+}
+
+.about-container{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+}
+/* Fire Container */
+#fire-container{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:99999;
+}
+
+.fire{
+    position:absolute;
+    width:16px;
+    height:16px;
+    border-radius:50%;
+    background:radial-gradient(circle,
+        #fff 0%,
+        #ffd54f 20%,
+        #ff9800 45%,
+        #ff5722 70%,
+        rgba(255,87,34,0) 100%);
+    box-shadow:
+        0 0 10px #ff9800,
+        0 0 20px #ff5722,
+        0 0 35px red;
+    animation:burn .8s linear forwards;
+}
+
+@keyframes burn{
+
+    0%{
+        opacity:1;
+        transform:translate(-50%,-50%) scale(1);
+    }
+
+    100%{
+        opacity:0;
+        transform:
+        translate(-50%,-90px)
+        scale(.1);
+    }
+
+}
