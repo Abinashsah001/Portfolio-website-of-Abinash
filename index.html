@@ -59,7 +59,7 @@
                 skills in Web Development, Java, Python, SQL and DSA.
             </p>
 
-            <a href="c:\Users\abina\OneDrive\Desktop\RESUME OF ABINASH KUMAR SAH.pdf" class="btn" download>
+            <a href="resume.pdf" class="btn" download>
                 Download Resume
             </a>
 
@@ -67,7 +67,7 @@
 
         <div class="hero-image">
 
-            <img src="c:\Users\abina\Downloads\WhatsApp Image 2026-04-24 at 9.04.41 AM.jpeg" alt="Profile">
+            <img src="profile.jpeg" alt="Abinash Kumar Sah">
 
         </div>
 
@@ -82,7 +82,7 @@
         <div class="about-container">
 
             <div class="about-image">
-                <img src="c:\Users\abina\Downloads\WhatsApp Image 2026-04-24 at 9.04.41 AM.jpeg" alt="Profile">
+                <img src="profile.jpeg" alt="Abinash Kumar Sah">
             </div>
 
             <div class="about-text">
@@ -242,20 +242,40 @@
     <section id="Contact" data-aos="fade-up">
 
         <h2>Contact Me</h2>
+<form id="contact-form">
 
-        <form>
+    <input
+        type="text"
+        name="name"
+        placeholder="Your Name"
+        required
+    >
 
-            <input type="text" placeholder="Your Name">
+    <input
+        type="email"
+        name="email"
+        placeholder="Your Email"
+        required
+    >
 
-            <input type="email" placeholder="Your Email">
+    <input
+        type="text"
+        name="subject"
+        placeholder="Subject"
+        required
+    >
 
-            <input type="text" placeholder="Subject">
+    <textarea
+        name="message"
+        placeholder="Message"
+        required
+    ></textarea>
 
-            <textarea placeholder="Message"></textarea>
+    <button type="submit">
+        Send Message
+    </button>
 
-            <button type="submit">Send Message</button>
-
-        </form>
+</form>
 
     </section>
 
@@ -290,14 +310,22 @@
     </footer>
 
     <!-- ================= JAVASCRIPT ================= -->
-
-    <!-- Typed.js -->
-<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<!-- Typed.js -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
 
 <!-- AOS -->
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
-<!-- Your JS -->
+<!-- EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+    emailjs.init({
+        publicKey: "WH4SHNccvG_WP4ZGo"
+    });
+</script>
+
+<!-- Your JavaScript -->
 <script src="script.js"></script>
 </body>
 </html>

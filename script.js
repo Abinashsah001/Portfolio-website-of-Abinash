@@ -105,11 +105,10 @@ topBtn.addEventListener("click", () => {
     });
 
 });
-
 // ===============================
-// Contact Form
+// Contact Form (EmailJS)
 // ===============================
-const form = document.querySelector("form");
+const form = document.getElementById("contact-form");
 
 if (form) {
 
@@ -117,9 +116,25 @@ if (form) {
 
         e.preventDefault();
 
-        alert("Thank you! Your message has been sent successfully.");
+        emailjs.sendForm(
+            "service_jnjad29",
+            "template_avno3c1",
+            this
+        )
+        .then(() => {
 
-        form.reset();
+            alert("Thank you! Your message has been sent successfully.");
+
+            form.reset();
+
+        })
+        .catch((error) => {
+
+            alert("Failed to send message.");
+
+            console.log(error);
+
+        });
 
     });
 
